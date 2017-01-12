@@ -1,0 +1,57 @@
+.client-select-by-number {
+	background-color: $buttonColor;
+	color: $buttonText;
+	height: 100%;
+	overflow-y: auto;
+	width: 100%;
+
+	.button {
+		background: #fff;
+		color: $buttonColor;
+		margin: 4em 1em;
+		width: calc(100% - 2em);
+	}
+
+	.header-of-page {
+		border-bottom: 1px solid #fff;
+		padding: 1.91em 0;
+		margin: 0;
+
+		span {
+			color: $buttonText;
+		}
+	}
+
+	.name {
+		height: 3.3em;
+		padding: 1em 1.25em;
+		background: #19aba9;
+
+		span {
+			font-size: 1.25em;
+			font-family: $textM;
+		}
+		.userBonus {
+			font-size: .91em;
+			float: right;
+		}
+	}
+
+	.text {
+		padding: 0 1.25em;
+		margin: .5em 0;
+
+		span {
+			font-size: .91em;
+		}
+	}
+}
+
+.client-select-by-number__bg {
+	img {
+		display: block;
+		margin: 0 auto 4em;
+		max-width: 346px;
+		width: 80%;
+	}
+}

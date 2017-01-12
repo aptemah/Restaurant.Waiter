@@ -1,0 +1,50 @@
+.select {
+  position: relative;
+  height: 4.1em;
+  margin: 1.91em 1.7em;
+  overflow: hidden;
+  border-top-left-radius: .4em;
+  border-top-right-radius: .4em;
+  border: 1px solid rgb(155, 155, 155);
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 70%;
+    width: 3.83em;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    border-left: 1px solid #9b9b9b;
+    background: url("../img/drop-down.png") center/17px 8px no-repeat;
+    z-index: -1;
+  }
+  select {
+    width: 120%;
+    height: 100%;
+    padding: 0 1.23em;
+    font-size: 0.91em;
+    border: none;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+    option {
+      display: inline-block;
+      width: 80%;
+      border: none;
+    }
+  }
+}
+.select--invisible {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.select--visible {
+  opacity: 1;
+}

@@ -1,0 +1,27 @@
+﻿<div class="create-select-new">
+
+    <div class="header-of-page"><span>Регистрация нового гостя</span></div>
+
+    <form name="form" novalidate>
+        <div class="input-reg">
+            <div class="text">Введите Имя Фамилию гостя</div>
+            <input type="text" placeholder="ФИО" ng-change="getUser(searchPattern)"pattern="^[А-ЯЁа-яёa-zA-Z]+.*$"  ng-model="name" required>
+        </div>
+
+        <div class="input-reg">
+            <div class="text">Номер телефона гостя</div>
+            <input type="text" ng-model="phone" pattern="(^(\+7)[\d]{7,10}$)|(^\d{16}$)" required>
+        </div>
+
+        <div class="input-reg">
+            <div class="text" ng-show="form.$error.required && message">Введите данные!</div>
+            <div class="text" ng-show="form.$error.pattern && message">Неверный ввод!</div>
+            <div class="text" ng-show="allReadyRegistred && message">Пользователь уже зарегистрирован!</div>
+        </div>
+
+        <button class="button" ng-click="createUser(form.$invalid); message = true;"><span>Зарегистрировать</span></button>
+    </form>
+	<div class="client-select-new__bg">
+		<img src="assets/img/logo_bg.png" alt="" />
+	</div>
+</div>

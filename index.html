@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html ng-app="waiter">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1, maximum-scale=1">
+    <meta charset="utf-8" />  
+    <!--<link rel="stylesheet" href="Content/bootstrap.min.css"/>-->
+    <link href="assets/css/main.css" rel="stylesheet"/>
+
+    <!-- Libraries-->
+    <script type="text/javascript" src="assets/libs/angular.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angular-touch.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angular-resource.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angular-mocks.js"></script>
+    <script type="text/javascript" src="assets/libs/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="assets/libs/moment-with-locales.min.js"></script>
+
+   
+    <!-- Main module -->
+    <script type="text/javascript" src="app/waiter.module.js"></script>
+    <script type="text/javascript" src="app/init/config.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="app/service/config/config.module.js"></script>
+    <script type="text/javascript" src="app/service/config/config.const.js"></script>
+    <script type="text/javascript" src="app/service/config/values/delivery.value.js"></script>
+    <script type="text/javascript" src="app/service/config/values/payment.value.js"></script>
+
+    <script type="text/javascript" src="app/service/i18n/i18n.module.js"></script>
+    <script type="text/javascript" src="app/service/i18n/i18n.service.js"></script>
+
+
+
+    <script type="text/javascript" src="app/service/api/waiter.module.js"></script>
+    <script type="text/javascript" src="app/service/api/waiter.factory.js"></script>
+    <script type="text/javascript" src="app/service/api/waiter.service.js"></script>
+
+    <script type="text/javascript" src="app/service/custom/popup.service.js"></script>
+
+    <!-- Pages -->
+    <script type="text/javascript" src="app/pages/orders/all-orders.controller.js"></script>
+    <script type="text/javascript" src="app/pages/orders/new-orders.controller.js"></script>
+    <script type="text/javascript" src="app/pages/orders/waiter-orders.controller.js"></script>
+    <script type="text/javascript" src="app/pages/orders/order-details.controller.js"></script>
+    <script type="text/javascript" src="app/pages/orders/create-order.controller.js"></script>
+    <script type="text/javascript" src="app/pages/orders/close-order.controller.js"></script>
+
+    <script type="text/javascript" src="app/pages/client/client-select.controller.js"></script>
+    <script type="text/javascript" src="app/pages/client/client-select-by-number.controller.js"></script>
+    <script type="text/javascript" src="app/pages/client/client-scan-qr.controller.js"></script>
+    <script type="text/javascript" src="app/pages/client/client-select-new.controller.js"></script>
+
+    <script type="text/javascript" src="app/pages/dishes/menu-first.controller.js"></script>
+    <script type="text/javascript" src="app/pages/personalization/authorization.controller.js"></script>
+
+    <!-- Components -->
+    <script type="text/javascript" src="app/pages/components/string-to-number.directive.js"></script>
+    <script type="text/javascript" src="app/pages/components/side-menu.directive.js"></script>
+    <script type="text/javascript" src="app/pages/components/bottom-menu.directive.js"></script>
+    <script type="text/javascript" src="app/pages/components/top-menu.directive.js"></script>
+    <script type="text/javascript" src="app/pages/components/popup.directive.js"></script>
+    <script type="text/javascript" src="app/pages/components/swipe-event.directive.js"></script>
+
+
+
+</head>
+<body>
+<top-menu  ng-class="{'side-menu': sideMenu}"></top-menu>
+<side-menu ng-class="{'active': sideMenu}"></side-menu>
+<div class="ng-view content"></div>
+<bottom-menu></bottom-menu>
+<popup></popup>
+</body>
+</html>

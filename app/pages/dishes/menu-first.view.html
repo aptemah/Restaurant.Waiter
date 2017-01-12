@@ -1,0 +1,26 @@
+<div class="select-dish">
+	<div class="header-of-page">
+		<span>{{parentCategory}}</span>
+		<span ng-show="defaultParent">Выбор блюда</span>
+	</div>
+
+	<button class="button button--true" ng-if="status == 'category'" ng-repeat="item in menu" ng-click="go(item.Id)">{{item.Name}}</button>
+
+	<button class="button select-dish__item" ng-if="status != 'category'" ng-repeat="item in menu" ng-click="go(item.Id, item.Name, item.Price, item.Weight, isBonus)">
+		<span class="select-dish__item-img"><img ng-src="{{imagePath + item.Image}}" alt="noimg" /></span>
+
+		<span class="select-dish__item-desc">
+			<span class="select-dish__item-name bold">{{item.Name}}</span>
+
+			<span class="select-dish__item-weight"><span class="bold">Выход:</span> {{item.Weight}}</span>
+
+			<span class="select-dish__item-price"><span class="bold">Состав:</span> {{item.Price}}</span>
+		</span>
+	</button>
+
+	<div class="search-input">
+		<input type="text" ng-model="searchPattern"><button class="button button--true" ng-click="search(searchPattern)"></button>
+	</div>
+
+	<div ng-show="noFound">Ничего не найдено!</div>
+</div>

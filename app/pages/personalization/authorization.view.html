@@ -1,0 +1,14 @@
+﻿<div class="authorization">
+	<div class="header-of-page">
+		<span>Авторизация</span>
+	</div>
+
+	<form name="form" novalidate>
+		<input type="text" value="" name="login" placeholder="Логин" id="login" class="form-control" autofocus ng-model="login" required/>
+		<input type="password" value="" name="password" placeholder="Пароль" id="password" class="form-control" ng-model="pass" required/>
+
+		<div class="text" ng-show="form.$error.required && message">Заполните поля!</div>
+		<div class="text" ng-show="wrongData">Неверный логин или пароль!</div>
+		<button class="button button--true" ng-click="submit(form.$invalid); message = true;">Войти</button>
+	</form>
+</div>

@@ -1,0 +1,66 @@
+﻿<div>
+
+    <div class="orders orders--unconfirmed">
+        <div class="header-of-page"><span>Создать заказ</span></div>
+        <div class="header">
+            <div class="user-name click" ng-click="clientSelect(order.UserName)">
+                <span ng-show="!newOrderInfo.userName">Выбор гостя</span>
+                <span>{{newOrderInfo.userName}}</span></div>
+            <div class="table-number click right-float"><input type="number" string-to-number ng-model="newOrderInfo.tableNo"></div>
+        </div>
+        <div class="order">
+
+            <div class="add-dish" ng-click="addDish()"><div class="text">Добавить блюдо</div></div>
+
+            <div class="orders__amount">
+                <div>Сумма</div>
+                <div>{{newOrderInfo.price()}} руб.</div>
+            </div>
+
+            <div class="order__part" ng-repeat="orderPart in order.OrderParts">
+                <div class="item" ng-repeat="p in orderPart.Products">
+                    <div class="image" style="background-image: url('{{contentUrl}}/{{p.Image}}'); background-color: #00ced1"></div>
+                    <div class="right-side">
+                        <div class="info">
+                            <span>{{p.Name}}</span>/
+                            <span>{{p.Price}} руб.</span>/
+                            <span>{{p.Weight}}</span>
+                        </div>
+                        <div class="quantity">
+                            <div class="number">{{p.Quantity}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table" ng-if="productsLength() > 0">
+                <tr class="table__head">
+                    <td><span>Блюдо</span></td>
+                    <td><span>Кол-во</span></td>
+                    <td><span>Стоимость</span></td>
+                </tr>
+                <tbody class="order__part">
+                <tr class="item" ng-repeat="(key, p) in newOrderInfo.products" swipe-event="{{key}}" from="client">
+                    <td class="name"><span>{{p.name}}</span></td>
+                    <td class="quantity">
+                        <span class="minus" ng-click="p.quantity = p.quantity != 1 ? (p.quantity - 1) : p.quantity; changeQuantityOfAdditional(key, p.quantity)"></span>
+                        <span class="selector"><div class="quantity">{{p.quantity}}</div></span>
+                        <span class="plus"  ng-click="p.quantity = p.quantity + 1; changeQuantityOfAdditional(key, p.quantity)"></span>
+                    </td>
+                    <td class="price"><span>{{p.price}} руб.</span></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div ng-show="emptyForms">Не все поля заполнены!</div>
+
+
+
+        <div class="buttons">
+            <button class="button button--true" ng-click="createOrder()"><span>Создать заказ <img src="assets/img/tic.png" alt="" /></span></button>
+        </div>
+    </div>
+
+</div>

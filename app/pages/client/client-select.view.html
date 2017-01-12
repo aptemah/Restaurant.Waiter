@@ -1,0 +1,25 @@
+﻿<div class="client-select">
+	<div class="header-of-page">
+		<span>Владелец карты</span>
+	</div>
+
+	<div class="variants-block">
+		<div class="text">
+			Найти владельца карты:
+		</div>
+
+		<div class="buttons">
+			<button ng-click="go('/clientSelectByNumber')" class="button button--true"><span>По номеру <img src="assets/img/search2.png" alt="" /></span></button>
+
+			<button ng-click="go('/clientScanQr')" class="button button--true"><span>Скан QR <img src="assets/img/scan2.png" alt="" /></span></button>
+		</div>
+	</div>
+
+	<div class="new-user">
+		<div class="text">
+			Новый пользователь:
+		</div>
+
+		<button ng-click="go('/clientSelectNew')" class="button button--true"><span>Зарегистрировать</span></button>
+	</div>
+</div>

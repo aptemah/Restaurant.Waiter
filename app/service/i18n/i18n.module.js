@@ -1,0 +1,1 @@
+angular.module('waiter.i18n', []);

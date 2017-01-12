@@ -1,0 +1,39 @@
+.bottom-menu {
+  position: absolute;
+  bottom: 0;
+  height: 3.2em;
+  width: 100%;
+  background-color: #fff;
+  .img {
+    display: inline-block;
+    height: 100%;
+    width: 2.42em;
+    vertical-align: middle;
+    &.new {
+      background: url('../img/new_order.png') center / 21px 21px no-repeat;
+    }
+    &.scan {
+      background: url('../img/scan.png') center / 18px 15px no-repeat;
+    }
+  }
+  .bottom-menu__item {
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #d6d6d6;
+
+    &:first-of-type {
+      border-right: none;
+    }
+    .text {
+      display: inline-block;
+      font-size: .91em;
+      font-family: $textB;
+      vertical-align: middle;
+      margin-top: 0.3em;
+    }
+  }
+}

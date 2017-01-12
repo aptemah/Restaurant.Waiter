@@ -1,0 +1,9 @@
+<div class="popup" ng-show="appearance" popup-close-able>
+  <div class="popup__block">
+    <div class="popup-content">
+      <div class="popup-content__name" ng-hide="notPush">Push уведомление</div>
+      <div class="popup-content__number-block">{{message}}</div>
+      <button class="button button--true popup-content__button" ng-click="appearance = false">ОК</button>
+    </div>
+  </div>
+</div>

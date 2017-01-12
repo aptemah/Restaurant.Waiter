@@ -1,0 +1,28 @@
+﻿<div class="order-close">
+	<div class="header-of-page">
+		<span ng-if="pageToReturn != '/closeOrder'">Закрыть заказ</span>
+		<span ng-if="pageToReturn == '/closeOrder'">Начислить бонусы</span>
+	</div>
+
+	<div class="center order-close__bill">
+		<div>
+			Введите сумму счета:
+		</div>
+
+		<input type="number" ng-model="closeOrderInfo.orderSum" string-to-number />
+	</div>
+
+	<div class="order-close__user">
+		<span>
+			<span ng-show="userName.length == 0 || userName == undefined" class="bold order-close__user__name">Имя не определено</span>
+			<span class="bold order-close__user__name">{{userName}}</span>
+			<span class="order-close__user__phone">{{userPhone}}</span>
+		</span>
+
+	</div>
+	<div>{{vm.bonus}}</div>
+	<div class="buttons">
+		<button class="button button--true" ng-if="pageToReturn != '/closeOrder'" ng-click="payByCash()">Закрыть заказ <img src="assets/img/close2.png" alt="" /></button>
+		<button class="button button--true" ng-if="pageToReturn == '/closeOrder'" ng-click="payByCash()">Начислить бонусы <img src="assets/img/tic.png" alt="" /></button>
+	</div>
+</div>

@@ -1,0 +1,73 @@
+{
+  "personalization": {
+    "registration": {
+      "card-no-required": "Введите Ваш номер карты учстника фитнесс-клуба",
+      "phone-required": "Введите Ваш номер телефона",
+      "password-required": "Введите пароль",
+      "re-password-required": "Повторите пароль",
+      "incorrect-card-no": "Неверный номер карты",
+      "incorrect-phone": "Неверный номер телефона",
+      "passwords-do-not-match": "Пароли не совпадают",
+      "registration-failed": "Ошибка регистрации",
+      "select-club": "Выберите клуб"
+    },
+    "login": {
+      "login-failed": "Ошибка входа. Проверьте номер карты и пароль."
+    },
+    "reset-password": {
+      "card-no-required": "Введите Ваш номер карты участника фитнесс-клуба",
+      "sms-code-required": "Введите код подтверждения, высланный в СМС на ваш телефон",
+      "password-required": "Введите пароль",
+      "re-password-required": "Повторите пароль",
+      "incorrect-card-no": "Неверный номер карты",
+      "incorrect-sms-code": "Неверный код подтверждения",
+      "passwords-do-not-match": "Пароли не совпадают",
+      "reset-password-failed": "Ошибка сброса пароля; проверьте введенные данные еще раз"
+    }
+  },
+  "member": {
+    "profile-is-empty-complete-now": "Чтобы получить возможность общаться, заполните, пожалуйста, свой профиль. Это займет всего 1 минуту. Заполнить сейчас?",
+    "remove-progress-confirmation": "Вы точно хотите удалить все данные по этому параметру?",
+    "remove-friend-confirmation": "Удалить из друзей?"
+  },
+  "staff": {
+    "remove-client-confirmation": "Удалить из списка клиентов?"
+  },
+  "instafit": {
+    "remove-photos-confirmation": "Удалить выбранные фото из инстафита?",
+    "remove-photo-confirmation": "Удалить это фото из инстафита?"
+  },
+  "trainings": {
+    "incorrect-time": "Неверно указано время",
+    "out-of-gym-work-time": "Извините, тренажерный зал закрыт в это время",
+    "out-of-pool-work-time": "Извините, бассейн закрыт в это время"
+  },
+  "invite": {
+    "success": "Приглашение было успешно отправлено!",
+    "phone-required": "Введите Ваш номер телефона",
+    "phone-invalid": "Неверный формат телефонного номера",
+    "name-required": "Введите Вашe имя"
+  },
+  "settings": {
+    "password": {
+      "old-password-required": "Введите текущий пароль",
+      "new-password-required": "Введите новый пароль",
+      "re-password-required": "Повторите новый пароль",
+      "passwords-do-not-match": "Новые пароли не совпадают",
+      "password-change-success": "Пароль успешно изменен",
+      "password-change-failed": "Ошибка смены пароля; проверьте введенные данные еще раз"
+    },
+    "push": {
+      "success": "Настройки push-уведомлений успешно сохранены"
+    },
+    "club": {
+      "success": "Ваш клуб успешно изменен"
+    },
+    "phone": {
+      "phone-required": "Введите новый номер телефона",
+      "sms-code-required": "Введите код подтверждения, высланный в СМС на ваш телефон",
+      "success": "Номер телефона был успешно изменен",
+      "failed": "Ошибка изменения номера телефона; проверьте введенные данные еще раз"
+    }
+  }
+}

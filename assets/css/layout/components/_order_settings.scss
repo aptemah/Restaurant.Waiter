@@ -1,0 +1,48 @@
+.order-settings {
+  margin: 1.8em 1.7em;
+  padding: 1em .62em;
+  background-color: rgb(228, 228, 228);
+  border: 1px solid rgb(155, 155, 155);
+  .left-side {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    border-right: 1px solid #fff;
+    .input-radio {
+      margin: 1em 0;
+    }
+  }
+  .right-side {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    text-align: center;
+    .input-checkbox {
+      margin: 1em 0;
+      label {
+        >div {
+          width: 55%;
+        }
+        &:before {
+          vertical-align: top;
+        }
+      }
+    }
+    .time-input {
+      display: inline-block;
+      width: 8.1em;
+      height: 1.95em;
+      padding: .3em 0 0;
+      border: 1px solid #9b9b9b;
+      border-radius: .4em;
+      background-color: #fff;
+      input {
+        width: 1.2em;
+        font-size: .91em;
+        border: none;
+        background-color: transparent;
+        text-align: center;
+      }
+    }
+  }
+}

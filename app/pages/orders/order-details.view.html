@@ -1,0 +1,73 @@
+﻿<div class="order-details">
+
+    <div class="orders orders--unconfirmed">
+        <div class="header-of-page"><span>Заказ {{order.OrderNumber}}</span></div>
+
+
+        <div class="order">
+
+            <div class="header">
+                <div class="user-name" ng-click="clientSelect(order.UserName)"><span ng-show="!order.UserName">Выбор гостя</span><span>{{order.UserName}}</span></div>
+                <div class="table-number click right-float"><input type="number" string-to-number ng-change="addTableNo()" ng-model="order.TableNo"></div>
+            </div>
+
+            <div class="add-dish" ng-click="addDish()"><div class="text">Добавить блюдо</div></div>
+
+            <div class="orders__amount">
+                <div>Сумма</div>
+                <div>{{order.OrderSum + newOrderInfo.price()}} руб.</div>
+                <div>{{order.OrderBonusSum + newOrderInfo.price()}} бон.</div>
+            </div>
+
+            <table class="table" ng-if="productsLength() > 0">
+                <tr class="table__head">
+                    <td><span>Блюдо</span></td>
+                    <td><span>Кол-во</span></td>
+                    <td><span>Стоимость</span></td>
+                </tr>
+                <tbody class="order__part">
+                    <tr class="item" ng-repeat="(key, p) in newOrderInfo.products" swipe-event="{{key}}" from="client">
+                        <td class="name"><span>{{p.name}}</span></td>
+                        <td class="quantity">
+                            <span class="minus" ng-click="p.quantity = p.quantity != 1 ? (p.quantity - 1) : p.quantity; changeQuantityOfAdditional(key, p.quantity)"></span>
+                            <span class="selector"><div class="quantity">{{p.quantity}}</div></span>
+                            <span class="plus"  ng-click="p.quantity = p.quantity + 1; changeQuantityOfAdditional(key, p.quantity)"></span>
+                        </td>
+                        <td class="price" ng-if="!p.isBonus"><span>{{p.price}} руб.</span></td>
+                        <td class="price" ng-if="p.isBonus"><span>{{p.price}} бон.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttons">
+                <button class="button button--true" ng-click="addProduct()" ng-show="productsLength() > 0"><span>Добавить в заказ</span></button>
+            </div>
+            <table class="table" ng-if="productsOrderedLength() > 0">
+                <tr class="table__head">
+                    <td><span>Блюдо</span></td>
+                    <td><span>Кол-во</span></td>
+                    <td><span>Стоимость</span></td>
+                </tr>
+                <tbody class="order__part" ng-repeat="orderPart in order.OrderParts">
+                    <tr class="item" ng-repeat="p in orderPart.Products" swipe-event="{{p.Id}}" order='order' from="server">
+                        <td class="name"><span>{{p.Name}}</span></td>
+                        <td class="quantity">
+                            <span class="minus" ng-click="p.Quantity = p.Quantity != 1 ? (p.Quantity - 1) : p.Quantity; changeProductQuantity(p.Id, p.Quantity)"></span>
+                            <span class="selector"<div class="quantity">{{p.Quantity}}</div></select></span>
+                            <span class="plus"  ng-click="p.Quantity = p.Quantity + 1; changeProductQuantity(p.Id, p.Quantity)"></span>
+                        </td>
+                        <td class="price" ng-if="!p.isBonus"><span>{{p.Price}} руб.</span></td>
+                        <td class="price" ng-if="p.isBonus"><span>{{p.Price}} бон.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="buttons">
+            <button class="button button--true" ng-click="getOrder(order.Id)" ng-hide="isWaiterOrder"><span>Взять</span></button>
+            <button class="button button--true" ng-click="approveOrder()" ng-show="isWaiterOrder && !order.IsApproved"><span>Подтвердить</span></button>
+            <button class="button button--true" ng-click="closeOrder()" ng-show="order.IsApproved"><span>Закрыть заказ</span></button>
+        </div>
+    </div>
+
+</div>

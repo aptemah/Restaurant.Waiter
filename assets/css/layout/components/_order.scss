@@ -1,0 +1,260 @@
+.orders {
+	padding: 0;
+	.orders__amount {
+		display: inline-block;
+		float: right;
+		width: 5em;
+		margin-top: 1.38em;
+		margin-right: 1em;
+		div {
+			font-size: .91em;
+			&:first-of-type {
+				font-family: $textB;
+			}
+		}
+	}
+	.buttons {
+		display: inline-block;
+		padding: 0 1em;
+		width: 100%;
+
+		img {
+			display: inline-block;
+			height: 1.5em;
+			margin: 0 0 0 .4em;
+			vertical-align: middle;
+		}
+	}
+}
+.order {
+	.table {
+		width: 100%;
+		padding: 0 1em;
+		border-collapse: collapse;
+		td {
+			padding: 1em;
+			span {
+				font-size: .91em;
+			}
+		}
+		tr {
+			border-bottom: 1px solid #fff;
+		}
+		.table__head {
+			font-family: $textB;
+			border-top: 1px solid #9b9b9b;
+			border-bottom: 1px solid #9b9b9b;
+		}
+		.name {
+			width: 13.5em;
+		}
+		.quantity {
+			width: 9.5em;
+		}
+		.price {
+			width: 7em;
+		}
+	}
+	.order__part {
+		background-color: #e4e4e4;
+	}
+	.order__part:not(:last-of-type) {
+		border-bottom: 2px solid #888;
+		margin-bottom: 1em;
+	}
+	.order__info {
+		margin: 0;
+		padding: 1.21em 1.64em;
+		font-family: $textM;
+		background: url("../img/edit_alt.png") 95% center/14px 14px no-repeat;
+		span {
+			display: inline-block;
+			font-size: .91em;
+		}
+		.order__number {
+			display: inline-block;
+			width: 4.7em;
+		}
+		.order__table {
+			display: inline-block;
+			width: 5.1em;
+		}
+		.order__name {
+			display: inline-block;
+		}
+	}
+	&:nth-of-type(odd) .order__info {
+		background-color: #eee;
+	}
+	&:nth-of-type(even) .order__info {
+		background-color: #e4e4e4;
+	}
+	.item {
+		.image {
+			width: 5.8em;
+			height: 5.8em;
+			display: inline-block;
+			background: center / cover;
+		}
+		.right-side {
+			display: inline-block;
+			width: 17em;
+			vertical-align: top;
+		}
+		.info {
+			display: block;
+			margin: .91em 0;
+			font-size: 0.91em;
+			font-family: $textB;
+		}
+		.quantity {
+			display: block;
+			height: 4.5em;
+			margin: 0;
+			padding: 0 .3em;
+			&>button:first-child {
+				margin-left: -.6em;
+			}
+			&.quantity--number-only {
+				display: block;
+				margin: 0;
+			}
+			>* {
+				vertical-align: middle;
+			}
+			.minus {
+				display: inline-block;
+				width: 3em;
+				height: 4.5em;
+				background: url(../img/item_minus.png) center/21px 21px no-repeat;
+			}
+			.selector {
+				display: inline-block;
+				width: 2em;
+				padding-top: 1.5em;
+				height: 4em;
+				text-align: center;
+			}
+			.number {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.plus {
+				display: inline-block;
+				width: 3em;
+				height: 4.5em;
+				background: url(../img/item_plus.png) center/21px 21px no-repeat;
+			}
+			.quantity {
+				border: none;
+				background: transparent;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.add-dishes {
+	position: relative;
+}
+
+.select-dish {
+	padding: 0 1em;
+
+	.button {
+		font-family: $textB;
+		position: relative;
+
+		&.select-dish__item {
+			background-color: #fff;
+			border-radius: 0;
+			color: #000;
+			height: auto;
+			min-height: 8em;
+			padding: 0;
+		}
+
+		span {
+			font-family: $text;
+
+			&.bold {
+				font-family: $textB;
+			}
+
+			&.select-dish__item-name {
+				font-size: 1.5em;
+				font-family: $textB;
+				margin: 0 0 1em;
+				text-align: left;
+			}
+		}
+	}
+
+	.header-of-page {
+		border-bottom: 1px solid #d6d6d6;
+		margin: 0 0 3em;
+		padding: 1.91em 0;
+	}
+}
+
+.select-dish__item-desc {
+	display: inline-block;
+	min-height: 8em;
+	padding: 0 0 0 9em;
+	text-align: left;
+	width: 100%;
+
+	> span {
+		display: block;
+	}
+}
+
+.select-dish__item-img {
+	display: inline-block;
+	height: 8em;
+	left: 0;
+	line-height: 8em;
+	position: absolute;
+	top: 0;
+	vertical-align: middle;
+	width: 8em;
+	background: $buttonColor;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.select-dish__item-weight {
+	margin: 0 0 .3em;
+}
+
+.search-input {
+	margin: 4em 0 0;
+	position: relative;
+
+	input {
+		background-color: #fff;
+		border: 1px solid #eee;
+		border-radius: 0.4em;
+		height: 3.57em;
+		font-size: 1em;
+		padding: 0 5.25em 0 1.25em;
+		width: 100%;
+	}
+
+	.button {
+		background: url(../img/search.png) no-repeat center center / 20px 20px $mainColor;
+		height: 100%;
+		margin: 0;
+		min-height: 0;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 4em;
+	}
+}

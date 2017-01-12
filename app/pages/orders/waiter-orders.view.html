@@ -1,0 +1,18 @@
+﻿<div>
+    <div class="orders orders--unconfirmed">
+
+        <div class="header-of-page">
+            <div><span>Мои заказы</span><div class="orders__badge"><span>{{waiterOrders.length}}</span></div></div>
+        </div>
+
+        <div class="order" ng-click="go('/orderDetails/' + order.Id)" ng-repeat="order in waiterOrders">
+            <div class="order__info">
+                <div class="order__number">№ <span>{{order.OrderNumber}}</span></div>
+                <div class="order__table">Стол <span ng-click="addTableNo(o.Id)">{{order.TableNo}}</span></div>
+                <div class="order__name"><span>{{order.UserName}}</span></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
